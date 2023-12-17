@@ -97,3 +97,22 @@ and for the database (port 3306 for mysql)
 
 <img width="1219" alt="Screen Shot 2023-12-17 at 22 47 10" src="https://github.com/NikDzub/aws_vpc/assets/87159434/c027175e-cc4b-4c2a-9094-adf9abe86732">
 
+---
+
+<h2>Part 4</h2>
+
+![Screen Shot 2023-12-17 at 23 36 35](https://github.com/NikDzub/aws_vpc/assets/87159434/94460441-9f7b-4f28-8b25-cb43d2ead563)
+
+### Launching MySQL & RDS Instances ###
+
+first we need to create the subnet groups,in order to specify on which subnets we want our RDS database in
+
+<img width="693" alt="Screen Shot 2023-12-17 at 23 43 08" src="https://github.com/NikDzub/aws_vpc/assets/87159434/2759bbd1-73ec-4394-81e7-42dceb94faef">
+
+now lets create the database (2long 4 screenshot)
+
+engine - MySQL, Template - Dev/Test, Id - dev-rds-db, Instance configuration - db.t2.micro (free), VPC - dev_vpc, 
+subnet group - db_subnets (the one we just created), security group(firewall) - db_security_group, Availability Zone - 1b, 
+db name - app_db, pwd - rZpdQGf6QdKAYsE4iYf7 (lol)
+
+
