@@ -1,0 +1,3 @@
+select vpc
+vpc - Virtual Private Cloud is a commercial cloud computing service that provides a virtual private cloud,
+by provisioning a logically isolated section of Amazon Web Services Cloud.
