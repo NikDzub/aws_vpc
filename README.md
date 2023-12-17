@@ -1,4 +1,7 @@
+![Screen Shot 2023-12-17 at 20 45 52](https://github.com/NikDzub/aws_vpc/assets/87159434/9c60f54c-0889-4743-a929-af9f5d656a0f)
+
 ### Create VPC ###
+
 VPC - Virtual Private Cloud is a commercial cloud computing service that provides a virtual private cloud,
 by provisioning a logically isolated section of Amazon Web Services Cloud.
 
@@ -31,3 +34,17 @@ so lets create a public one as well and add routes
 ### Associate the subnets with the route table ###
 <img width="1233" alt="Screen Shot 2023-12-17 at 20 26 51" src="https://github.com/NikDzub/aws_vpc/assets/87159434/ca2c326d-5ffe-40b9-a6a7-f6ac60729e2d">
 we should now see 2 subnets added to the Explicit subnet associations on the public route table
+
+### Add 4 more private subnets (app + data) ###
+keeping in mind to associate the private subnet to the same availability zone as the public one
+
+<img width="1070" alt="Screen Shot 2023-12-17 at 20 51 16" src="https://github.com/NikDzub/aws_vpc/assets/87159434/70e90c11-2566-4914-ac72-3a746a6aa2cf">
+
+what makes the 2 public subnets actually public is that they are associated in the
+public route table wich is 0.0.0.0/24
+
+how the 4 remaining are private? bacause when we created the vpc the main route table was created
+wich is private, now when a subnet has not been associated with any route tables they auto associate with the main one.
+
+
+
