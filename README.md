@@ -25,6 +25,7 @@ The auto-assign IP settings determines if, when you launch an EC2 instance, the 
 ### Create Route Table & Add routes ###
 Once we created the vpc a main route table was created automatically for it, a private one
 so lets create a public one as well and add routes
+
 <img width="1234" alt="Screen Shot 2023-12-17 at 20 23 53" src="https://github.com/NikDzub/aws_vpc/assets/87159434/3811f77d-01ac-490d-b22e-ace4f5dd796a">
 
 ### Associate the subnets with the route table ###
