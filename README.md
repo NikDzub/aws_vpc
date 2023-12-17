@@ -1,4 +1,5 @@
-https://www.youtube.com/playlist?list=PL184oVW5ERMDJvU13lr664ncWhkfrMBJj
+<h2>Part 1</h2>
+
 ![Screen Shot 2023-12-17 at 20 45 52](https://github.com/NikDzub/aws_vpc/assets/87159434/9c60f54c-0889-4743-a929-af9f5d656a0f)
 
 ### Create VPC ###
@@ -47,9 +48,13 @@ public route table wich is 0.0.0.0/24
 how the 4 remaining are private? bacause when we created the vpc the main route table was created
 wich is private, now when a subnet has not been associated with any route tables they auto associate with the main one.
 
+---
+
+<h2>Part 2</h2>
+
 ![Screen Shot 2023-12-17 at 22 01 56](https://github.com/NikDzub/aws_vpc/assets/87159434/d35e1141-1b13-4e06-9f94-fed5d149c1fb)
 
-### Create NAT gateway && Private route tables ###
+### Create NAT gateway & Private route tables ###
 The NAT gateway allows the instances in the private subnets (app + data) to access the internet
 
 The private route table is associated with the private subnets and routes the traffic to the internet trough the NAT gateway
@@ -64,6 +69,31 @@ now lets associate this private route table with the private subnets of az1
 
 <img width="1245" alt="Screen Shot 2023-12-17 at 22 15 18" src="https://github.com/NikDzub/aws_vpc/assets/87159434/97dc5cca-0c79-489d-960e-7a415e467999">
 
+and basically the same for az2 as well
 
+---
 
+<h2>Part 3</h2>
+
+![Screen Shot 2023-12-17 at 22 29 00](https://github.com/NikDzub/aws_vpc/assets/87159434/56bba840-b9e3-49fe-ad2b-a92bad7eab27)
+
+### Creating security groups ###
+
+A security group acts as a virtual firewall for your instance to control inbound and outbound traffic.
+
+lets start with the app load balancer security group
+
+<img width="1223" alt="Screen Shot 2023-12-17 at 22 37 09" src="https://github.com/NikDzub/aws_vpc/assets/87159434/ad363ead-52b6-446b-83cb-24cea6d38745">
+
+then SSH 
+
+<img width="1219" alt="Screen Shot 2023-12-17 at 22 39 03" src="https://github.com/NikDzub/aws_vpc/assets/87159434/42d9d17d-9340-46a0-bbb3-d07587746af1">
+
+then the webserver (adding ssh & alb)
+
+<img width="1220" alt="Screen Shot 2023-12-17 at 22 43 56" src="https://github.com/NikDzub/aws_vpc/assets/87159434/0f448603-68a4-459f-ad2c-8adb5640f45e">
+
+and for the database (port 3306 for mysql)
+
+<img width="1219" alt="Screen Shot 2023-12-17 at 22 47 10" src="https://github.com/NikDzub/aws_vpc/assets/87159434/c027175e-cc4b-4c2a-9094-adf9abe86732">
 
