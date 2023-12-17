@@ -1,3 +1,4 @@
+https://www.youtube.com/playlist?list=PL184oVW5ERMDJvU13lr664ncWhkfrMBJj
 ![Screen Shot 2023-12-17 at 20 45 52](https://github.com/NikDzub/aws_vpc/assets/87159434/9c60f54c-0889-4743-a929-af9f5d656a0f)
 
 ### Create VPC ###
@@ -45,6 +46,24 @@ public route table wich is 0.0.0.0/24
 
 how the 4 remaining are private? bacause when we created the vpc the main route table was created
 wich is private, now when a subnet has not been associated with any route tables they auto associate with the main one.
+
+![Screen Shot 2023-12-17 at 22 01 56](https://github.com/NikDzub/aws_vpc/assets/87159434/d35e1141-1b13-4e06-9f94-fed5d149c1fb)
+
+### Create NAT gateway && Private route tables ###
+The NAT gateway allows the instances in the private subnets (app + data) to access the internet
+
+The private route table is associated with the private subnets and routes the traffic to the internet trough the NAT gateway
+
+<img width="725" alt="Screen Shot 2023-12-17 at 22 06 17" src="https://github.com/NikDzub/aws_vpc/assets/87159434/0f048e88-59e1-408b-836c-9904425840af">
+
+after creating the nat gateway lets create the private route table and add a route to the NAT
+
+<img width="1245" alt="Screen Shot 2023-12-17 at 22 10 57" src="https://github.com/NikDzub/aws_vpc/assets/87159434/49ac9da2-7776-47de-9b50-5b40c0f55a13">
+
+now lets associate this private route table with the private subnets of az1
+
+<img width="1245" alt="Screen Shot 2023-12-17 at 22 15 18" src="https://github.com/NikDzub/aws_vpc/assets/87159434/97dc5cca-0c79-489d-960e-7a415e467999">
+
 
 
 
